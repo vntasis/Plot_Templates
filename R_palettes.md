@@ -36,7 +36,9 @@
 - `scale_color_gradientn()`, `scale_fill_gradientn()` for gradient between n colors
 - `scale_fill_grey()`, `scale_colour_grey()` are always a classic
 - `colorRampPalette()` can be utilized to produce a larger number of colors than those available in a palette
+
    which subsequently can be fed to `scale_color_manual()` or `scale_fill_manual()`
+   
    e.g. `scale_color_manual(values = colorRampPalette(RColorBrewer::brewer.pal(8, "Dark2"))(16))`
 
 
