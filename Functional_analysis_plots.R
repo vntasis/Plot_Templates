@@ -12,3 +12,14 @@ df %>%
                        midpoint = median(df$p.value)) + 
   coord_flip() +
   ggtitle("Functional Analysis for ...")
+
+
+# Plotting results of a GSEA-like analysis 
+# (i.e. gene set - module enrichment anaysis) 
+# with a barplot - package used: ggplot2
+
+modules %>%
+  ggplot(aes(x = Module, y = Number_of_genes, fill = Deregulation)) +
+  geom_bar(width = 1, stat = "identity") +
+  scale_fill_manual(values = c("blue", "red", "grey")) +
+  coord_flip()
