@@ -14,6 +14,7 @@ reorder_cormat <- function(cormat){
   dd <- as.dist((1-cormat)/2)
   hc <- hclust(dd, method = "ward.D2")
   cormat <-cormat[hc$order, hc$order]
+  cormat
 }
 
 # calculate correlation
