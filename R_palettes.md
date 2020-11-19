@@ -36,6 +36,7 @@
 - `scale_color_gradientn()`, `scale_fill_gradientn()` for gradient between n colors
 - `scale_fill_grey()`, `scale_colour_grey()` are always a classic
 - `scale_color_viridis()` and `scale_fill_viridis()` for virdis color scales
+- `scale_colour_brewer` and `scale_fill_brewer` for [brewer scales](https://ggplot2.tidyverse.org/reference/scale_brewer.html)
 - `colorRampPalette()` can be utilized to produce a larger number of colors than those available in a palette
 
    which subsequently can be fed to `scale_color_manual()` or `scale_fill_manual()`
