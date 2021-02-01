@@ -51,7 +51,7 @@
 
 
 ### Color-blind friendly palettes
-- `colorblind_pal()`,`scale_colour_colorblind()`, `scale_color_colorblind()`, `scale_color_colorblind()` functions from [ggthemes](https://rdrr.io/cran/ggthemes/man/colorblind.html) package
+- `colorblind_pal()`,`scale_colour_colorblind()`, `scale_color_colorblind()`, `scale_fill_colorblind` functions from [ggthemes](https://rdrr.io/cran/ggthemes/man/colorblind.html) package
 - Use display.brewer.all(colorblindFriendly = TRUE) to see the colorblind-friendly palettes of [RColorBrewer](http://colorbrewer2.org "colorbrewer's color guide")
 - Both virdis and ggsci have colorblind-friendly options.
 
