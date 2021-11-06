@@ -8,6 +8,10 @@
 - [viridis](https://cran.csiro.au/web/packages/viridis/viridis.pdf "package documentation")
 
 
+#### Collection of most color palettes in a single R package
+- [paletteer](https://github.com/EmilHvitfeldt/paletteer)
+
+
 ### Preferred palettes
 #### ggshi
 - Futurama
