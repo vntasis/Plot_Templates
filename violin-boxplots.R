@@ -1,4 +1,4 @@
-# Basic violin - box Plot 
+# Basic violin - box Plot
 
 ggplot(data, aes(x, y, colour = x)) +
   geom_violin(trim=FALSE, fill='grey') +
@@ -7,6 +7,7 @@ ggplot(data, aes(x, y, colour = x)) +
         axis.text.x=element_blank(),
         axis.ticks.x=element_blank()) +
   scale_color_nejm()
+
 
 
 # Boxplots combined with facet_wrap
@@ -19,6 +20,21 @@ dt %>%
         axis.text.x=element_blank(),
         axis.ticks.x=element_blank()) +
   scale_color_futurama()
+
+
+
+# Example of boxplots with jittered points
+dt %>%
+  ggplot(aes(Group, variable, colour = Group)) +
+    geom_boxplot(fill = "grey") +
+    geom_jitter(color="black", size=0.4, alpha=0.9) +
+    facet_wrap(~factor, ncol = 2, scales = "free_y") +
+    theme(axis.title.x=element_blank(),
+          axis.text.x=element_blank(),
+          axis.ticks.x=element_blank()) +
+    scale_color_brewer(type = 'qual', palette='Dark2') +
+    scale_y_log10()
+
 
 
 # Draw Boxplots without outliers
@@ -44,6 +60,7 @@ dt %>%
         axis.text.x=element_blank(),
         axis.ticks.x=element_blank()) +
   scale_color_brewer(type = 'qual', palette='Dark2')
+
 
 
 # Violin - box Plot accompanied by a statistical test
