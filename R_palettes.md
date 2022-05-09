@@ -2,11 +2,13 @@
 
 
 ### Required Packages
-- [ggshi](https://nanx.me/ggsci/articles/ggsci.html "ggshi's vignette")
+- [ggsci](https://nanx.me/ggsci/articles/ggsci.html "ggsci's vignette")
 - [wesanderson](https://github.com/karthik/wesanderson "wesanderson's github repository")
 - [RColorBrewer](http://colorbrewer2.org "colorbrewer's color guide")
 - [viridis](https://cran.csiro.au/web/packages/viridis/viridis.pdf "package documentation")
 
+Or just get [paletteer](https://github.com/EmilHvitfeldt/paletteer), which is a
+fantastic package that collects most color palettes in R
 
 #### Collection of most color palettes in a single R package
 - [paletteer](https://github.com/EmilHvitfeldt/paletteer)
@@ -44,11 +46,12 @@
 - `colorRampPalette()` can be utilized to produce a larger number of colors than those available in a palette
 
    which subsequently can be fed to `scale_color_manual()` or `scale_fill_manual()`
-   
+
    e.g. `scale_color_manual(values = colorRampPalette(RColorBrewer::brewer.pal(8, "Dark2"))(16))`
 
 
 ### Useful pages
+- [A Comprehensive list of color palettes available in R by paletteer](https://github.com/EmilHvitfeldt/r-color-palettes)
 - [TOP R COLOR PALETTES TO KNOW FOR GREAT DATA VISUALIZATION](https://www.datanovia.com/en/blog/top-r-color-palettes-to-know-for-great-data-visualization/)
 - [ggplot2 colors : How to change colors automatically and manually?](http://www.sthda.com/english/wiki/ggplot2-colors-how-to-change-colors-automatically-and-manually)
 - [ggplot colors - best tricks](https://www.datanovia.com/en/blog/ggplot-colors-best-tricks-you-will-love/)
