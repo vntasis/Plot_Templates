@@ -10,12 +10,9 @@
 Or just get [paletteer](https://github.com/EmilHvitfeldt/paletteer), which is a
 fantastic package that collects most color palettes in R
 
-#### Collection of most color palettes in a single R package
-- [paletteer](https://github.com/EmilHvitfeldt/paletteer)
-
 
 ### Preferred palettes
-#### ggshi
+#### ggsci
 - Futurama
 - NEJM
 - JAMA
