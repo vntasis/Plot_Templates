@@ -73,3 +73,40 @@ ggplot(dt, aes(x, y, colour = x)) +
   scale_color_manual(values = colorRampPalette(pal_uchicago()(9))(10)) +
   stat_compare_means(label = "p.signif", method = "wilcox.test",
                      ref.group = ".all.", label.y = 1.15)
+
+
+# Customized Boxplots:
+#  - Split with facet_wrap
+#  - Bw theme
+#  - Box borders
+#  - Font family and size
+#  - No text on x axis
+#  - Colour palette that separates groups on x axis
+#  - Legend position and title
+#  - Log scale and adjustment for 0 values (infinite in log-scale)
+#  - Text annotation for the median values per group
+#  - Statistical test for comparing groups
+
+meds <-
+  dt %>%
+  group_by(x, feature) %>%
+  summarise(med=median(y)) %>%
+  ungroup
+
+dt %>%
+  ggplot(aes(x, y, colour = x)) +
+  geom_boxplot(fill = "grey") +
+  facet_wrap(~feature, ncol = 2, scales = "free_y") +
+  theme_bw() +
+  theme(panel.border=element_rect(size=2),
+        text = element_text(size=25, family='serif'),
+        axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        legend.position="bottom") +
+  scale_colour_paletteer_d('ggsci::dark_uchicago') +
+  scale_y_log10(oob = scales::squish_infinite) +
+  geom_text(data = meds, aes(y = med, label = round(med,3)),size = 4, vjust = -0.5) +
+  labs(colour = "Custom legend title") +
+  stat_compare_means(label = "p.signif", method = "wilcox.test",
+                     comparisons = list(c("group 1", "group 2")), vjust = 2)
