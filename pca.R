@@ -92,8 +92,6 @@ var_exp %>%
 ## combinations of the first 5 PCs
 ## with ggplot and facets
 #-----------------------------------
-library(grid)
-library(gtable)
 
 # Reshape pca output into long tibble
 # and take the 5 first principal components
