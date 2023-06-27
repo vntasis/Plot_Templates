@@ -30,7 +30,10 @@ dataset %>%
 #----------------------------------------------------------
 ## Perform a PCA, while managing, maintaining and
 ## evaluating the dataset and the results, all in one tibble
-## using tidyverse ,ggfortify and the broom packages.
+## using tidyverse and the broom packages.
+## This can also be useful if one wants to perform PCA
+## on many datasets included all in one grouped tibble.
+## (here the `dataset` tibble)
 #----------------------------------------------------------
 
 dataset_pca <- dataset %>%
