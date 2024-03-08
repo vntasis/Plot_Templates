@@ -1,21 +1,24 @@
-# Plotting results of Functional analysis 
-# (i.e. enrichment anaysis of a set of genes for biological pathways or other ontologies) 
+# Plotting results of Functional analysis
+# (i.e. enrichment anaysis of a set of genes for
+# biological pathways or other ontologies)
 # with a barplot - package used: ggplot2
 
 df %>%
   ggplot(aes(y = , x = )) +
-  geom_bar(position="dodge", stat="identity") +
-  geom_col(aes(fill = p.value)) + 
-  scale_fill_gradient2(low = "firebrick",
-                       mid = "azure4",
-                       high = "blue", 
-                       midpoint = median(df$p.value)) + 
+  geom_bar(position = "dodge", stat = "identity") +
+  geom_col(aes(fill = p.value)) +
+  scale_fill_gradient2(
+    low = "firebrick",
+    mid = "azure4",
+    high = "blue",
+    midpoint = median(df$p.value)
+  ) +
   coord_flip() +
   ggtitle("Functional Analysis for ...")
 
 
-# Plotting results of a GSEA-like analysis 
-# (i.e. gene set - module enrichment anaysis) 
+# Plotting results of a GSEA-like analysis
+# (i.e. gene set - module enrichment anaysis)
 # with a barplot - package used: ggplot2
 
 modules %>%

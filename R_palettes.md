@@ -55,11 +55,11 @@ fantastic package that collects most color palettes in R
 
 
 ### Color-blind friendly palettes
-- `colorblind_pal()`,`scale_colour_colorblind()`, `scale_color_colorblind()`, `scale_fill_colorblind` functions from [ggthemes](https://rdrr.io/cran/ggthemes/man/colorblind.html) package
+- `colorblind_pal()`, `scale_colour_colorblind()`, `scale_color_colorblind()`, `scale_fill_colorblind` functions from [ggthemes](https://rdrr.io/cran/ggthemes/man/colorblind.html) package
 - Use display.brewer.all(colorblindFriendly = TRUE) to see the colorblind-friendly palettes of [RColorBrewer](http://colorbrewer2.org "colorbrewer's color guide")
 - Both virdis and ggsci have colorblind-friendly options.
 
-#### For more details check thes pages
+#### For more details check these pages
 - [Color Universal Design](https://jfly.uni-koeln.de/color/)
 - [Tips for designing colorblind-friendly visualizations](https://www.tableau.com/about/blog/2016/4/examining-data-viz-rules-dont-use-red-green-together-53463)
 - [Colormaps in python (virdis related)](https://bids.github.io/colormap/)

@@ -43,9 +43,9 @@ dataset_pca <-
   dataset %>%
   nest() %>%
   mutate(
-    pca = map(data, ~ prcomp(.x %>% select(-Group),
-      center = TRUE, scale = TRUE
-    )),
+    pca = map(data,
+              ~ prcomp(.x %>% select(-Group),
+                       center = TRUE, scale = TRUE)),
     pca_aug = map2(pca, data, ~ augment(.x, data = .y))
   )
 
@@ -82,8 +82,11 @@ var_exp %>%
   facet_wrap(~name, scales = "free_x") +
   theme_bw() +
   ylab("") +
-  scale_x_discrete(labels = seq(1, nrow(var_exp), 2) %>%
-    paste0("_") %>% str_split("_") %>% unlist())
+  scale_x_discrete(labels =
+                     seq(1, nrow(var_exp), 2) %>%
+                     paste0("_") %>%
+                     str_split("_") %>%
+                     unlist())
 
 
 
